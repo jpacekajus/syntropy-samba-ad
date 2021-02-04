@@ -7,7 +7,7 @@
      state: present
      topology: p2m
      connections:
-       "{{ groups['domain_controllers'][0] }}":
+       domain-controller:
          state: present
          type: endpoint
          services: 

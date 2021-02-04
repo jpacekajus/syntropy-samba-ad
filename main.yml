@@ -21,9 +21,9 @@
   hosts: domain_clients
   vars:
     subnet: 172.2.{{ play_hosts.index(inventory_hostname) | int + 1 }}.0/24
-    cloud_provider: '1'
+    cloud_provider: '1' 
     api_key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    syntropy_tag: domain-client
+    syntropy_tag: '{{ ansible_hostname }}'
   roles:
     - syntropy-agent
 

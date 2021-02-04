@@ -55,7 +55,7 @@
          SYNTROPY_NETWORK_API: docker
          SYNTROPY_PROVIDER: '{{ cloud_provider }}'
          SYNTROPY_TAGS: '{{ syntropy_tag }}'
-         SYNTROPY_AGENT_NAME: '{{ inventory_hostname }}'
+         SYNTROPY_AGENT_NAME: '{{ syntropy_tag }}'
        volumes:
        - /var/run/docker.sock:/var/run/docker.sock:ro
        devices:
